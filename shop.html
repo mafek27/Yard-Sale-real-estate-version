@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Order</title>
+    <style>
+      :root {
+        --white: #ffffff;
+        --black: #000000;
+        --very-light-pink: #c7c7c7;
+        --text-input-field: #f7f7f7;
+        --hospital-green: #acd9b2;
+        --sm: 14px;
+        --md: 16px;
+        --lg: 18px;
+      }
+      body {
+        margin: 0;
+        font-family: "Quicksand", sans-serif;
+      }
+      .product-detail {
+        width: 360px;
+        padding: 24px;
+        box-sizing: border-box;
+        position: absolute;
+        right: 0;
+      }
+      .my-order {
+        width: 100px;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+      }
+      .title-container {
+        display: flex;
+      }
+      .title-container img {
+        transform: rotate(180deg);
+        margin: right 14px;
+      }
+      .my-order-container {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        width: 300px;
+      }
+      .my-order-content {
+        display: flex;
+        flex-direction: column;
+      }
+      .order {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 16px;
+        align-items: center;
+        background-color: var(--text-input-field);
+        margin-bottom: 24px;
+        border-radius: 8px;
+        padding: 0 21px;
+      }
+      .order p span:nth-child(1) {
+        font-size: var(md);
+        font-weight: bold;
+      }
+      .order p span:nth-child(2) {
+        font-size: var(sm);
+        color: var(--very-light-pink);
+      }
+      .order p:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+      }
+      .order p:nth-child(2) {
+        text-align: end;
+        font-weight: bold;
+      }
+      .shopping-cart {
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        gap: 16px;
+        margin-bottom: 24px;
+        align-items: center;
+      }
+      .shopping-cart figure {
+        margin: 0;
+      }
+      .shopping-cart p:nth-child(2) {
+        color: var(--very-light-pink);
+      }
+      .shopping-cart p:nth-child(3) {
+        font-size: var(--md);
+        font-weight: bold;
+      }
+      .shopping-cart figure img {
+        width: 70px;
+        height: 70px;
+        border-radius: 20px;
+        object-fit: cover;
+        margin: left 10px;
+      }
+      .title {
+        font-size: var(--lg);
+        margin-bottom: 18px;
+        margin-left: 20px;
+        font-weight: bold;
+      }
+      .primary-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        color: var(--white);
+        font-size: var(--md);
+        font-weight: bold;
+        background-color: var(--hospital-green);
+        cursor: pointer;
+      }
+      .product-detail-close {
+        background: var(--white);
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        z-index: 2;
+        padding: 12px;
+        border-radius: 50%;
+      }
+      .product-detail-close img {
+        z-index: 2;
+      }
+      .product-detail-close:hover {
+        cursor: pointer;
+      }
+      @media (max-width: 640px) {
+        .product-detail {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="product-detail">
+      <div class="title-container">
+        <img src="icons\flechita.svg" alt="arrow" />
+        <h1 class="title">Shopping cart</h1>
+      </div>
+
+      <div class="my-order">
+        <div class="my-order-container">
+          <div class="my-order-content">
+            <div class="shopping-cart">
+              <figure>
+                <img
+                  src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                  alt="Es una foto de una casa"
+                />
+              </figure>
+              <p>House</p>
+              <p>$230.000</p>
+              <img src="icons\icon_close.png" alt="close" />
+            </div>
+            <div class="shopping-cart">
+              <figure>
+                <img
+                  src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                  alt="Es una foto de una casa"
+                />
+              </figure>
+              <p>House</p>
+              <p>$230.000</p>
+              <img src="icons\icon_close.png" alt="close" />
+            </div>
+            <div class="shopping-cart">
+              <figure>
+                <img
+                  src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                  alt="Es una foto de una casa"
+                />
+              </figure>
+              <p>House</p>
+              <p>$230.000</p>
+              <img src="icons\icon_close.png" alt="close" />
+            </div>
+            <div class="shopping-cart">
+              <figure>
+                <img
+                  src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                  alt="Es una foto de una casa"
+                />
+              </figure>
+              <p>House</p>
+              <p>$230.000</p>
+              <img src="icons\icon_close.png" alt="close" />
+            </div>
+            <div>
+              <div class="order">
+                <p>
+                  <span>Total</span>
+                </p>
+                <p>$920.000</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <button class="primary-button">
+              <img src="icons\bt_added_to_cart.svg" alt="add to cart" />
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </body>
+</html>
